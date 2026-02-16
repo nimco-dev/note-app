@@ -1,0 +1,140 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background: #020202;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background effects */
+.orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.15), transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 10s infinite alternate;
+}
+
+@keyframes float {
+    from { transform: translate(-10%, -10%); }
+    to { transform: translate(10%, 10%); }
+}
+
+.vip-app {
+    width: 850px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(35px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.9);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 18px;
+    color: #00f2ff;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.sidebar-label {
+    font-size: 12px; 
+    color: #555; 
+    letter-spacing: 1px;
+}
+
+.status-sync {
+    color: #aaa; 
+    font-size: 14px;
+}
+
+.version {
+    margin-top: auto; 
+    color: #444; 
+    font-size: 11px;
+}
+
+.main-editor {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+    color: #fff;
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    font-weight: 600;
+}
+
+textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+    resize: none;
+    outline: none;
+}
+
+.vip-btn {
+    background: linear-gradient(90deg, #00f2ff, #0062ff);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.vip-btn:hover {
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #00f2ff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: 0 0 10px #00f2ff;
+}
